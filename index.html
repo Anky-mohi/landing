@@ -50,6 +50,15 @@
         max-width: 1200px;
     }
 }
+.from-blue-600\/90 {
+        --tw-gradient-from: #000000a6 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(37 99 235 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .to-blue-800\/90 {
+        --tw-gradient-to: #000000cc var(--tw-gradient-to-position);
+    }
 
     </style>
 </head>
@@ -66,12 +75,15 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-gray-100">
+
+
+
     
         <!-- Navbar -->
         <nav class="absolute top-0 left-0 w-full text-white z-20">
             <div class="container mx-auto px-4 flex justify-between items-center py-4">
                 <!-- Logo -->
-                <img class="logo w-24" src="/img/logos/2.png" alt="Logo" />
+                <img class="logo w-24" src="/img/logos/4-removebg-preview.png" alt="Logo" />
     
                 <!-- Menu Toggle Button -->
                 <button id="menu-toggle" class="md:hidden block focus:outline-none">
@@ -93,8 +105,12 @@
             </div>
         </nav>
     
+
+
+
+        
         <!-- Hero Section -->
-        <header class="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <header class="relative overflow-hidden bg-gradient-to-r from-blue-600/90 to-blue-800/90 text-white">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90"></div>
             <!-- Background image -->
             <div class="absolute inset-0 bg-[url('/img/6412173.jpg')] bg-cover bg-center mix-blend-overlay"></div>
@@ -147,6 +163,7 @@
                 </div>
             </div>
         </header>
+        
     
         <script>
             // Navbar menu toggle
