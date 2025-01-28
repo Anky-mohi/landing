@@ -28,9 +28,14 @@
     
     <style>
         /* Additional styling for your custom needs */
-        .logo {
-            width: 100px;
+        .logo{
+
+            width: 180px;
+            height: 50px;
+
         }
+      
+
 
         .bg-pattern {
                 background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext x=%220%22 y=%2210%22 font-size=%2210%22 fill=%22white%22 opacity=%22.1%22 transform=%22rotate(45)%22%3E~%3C/text%3E%3C/svg%3E');
@@ -39,56 +44,88 @@
                 opacity: 0.1;
                 pointer-events: none; /* Ensure the background does not interfere with interactions */
             }
+
+            @media (min-width: 1536px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
     </style>
 </head>
 <body class="bg-gray-900">
 
   
  
-
-
-
-        
-        <!-- Add the following CSS for the background pattern -->
-       
-        
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hero with Navbar</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
     
-
+        <!-- Navbar -->
+        <nav class="absolute top-0 left-0 w-full text-white z-20">
+            <div class="container mx-auto px-4 flex justify-between items-center py-4">
+                <!-- Logo -->
+                <img class="logo w-24" src="/img/logos/2.png" alt="Logo" />
+    
+                <!-- Menu Toggle Button -->
+                <button id="menu-toggle" class="md:hidden block focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+    
+                <!-- Menu -->
+                <div
+                    id="menu"
+                    class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 absolute md:static top-16 right-0 bg-blue-800 md:bg-transparent w-full md:w-auto z-10 shadow-lg md:shadow-none"
+                >
+                    <a href="#" class="block px-4 py-2 hover:bg-blue-700 rounded">Home</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-blue-700 rounded">About</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-blue-700 rounded">Services</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-blue-700 rounded">Contact</a>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Hero Section -->
         <header class="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90"></div>
-            <!-- Replace with your actual background image -->
+            <!-- Background image -->
             <div class="absolute inset-0 bg-[url('/img/6412173.jpg')] bg-cover bg-center mix-blend-overlay"></div>
         
-            <!-- Add subtle background pattern with logo symbol -->
-            <div class="absolute inset-0 bg-pattern"></div>
+            <!-- Watermark Logo -->
+            <div class="absolute inset-0 flex justify-center items-center opacity-10">
+                <img class="w-32" src="/img/logos/2.png" alt="Watermark Logo" />
+            </div>
         
             <div class="relative container mx-auto px-4 py-24 text-center">
-                
-                <!-- Logo Section - Beautiful Centered -->
-                <div data-aos="fade-down" data-aos-duration="1000" class="mb-12">
-                    <img src="/img/logos/2.png" alt="Caevana Logo" class="mx-auto mb-12 transform hover:scale-105 transition-transform shadow-xl rounded-md border-4 border-yellow-400 p-2 bg-white max-w-[300px] sm:max-w-[400px]">
-                </div>
-        
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-duration="1200">
-                    Pronto Para <span class="text-yellow-400">Levar Seu Negócio</span> no Mercado Livre ao <span class="text-yellow-400">Próximo Nível?</span>
-                </h1>
-                <p class="text-xl sm:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1400">
-                    Descubra como escalar suas vendas, automatizar operações e transformar seu e-commerce em uma máquina de resultados com a consultoria 'Caevana Premium'.
-                </p>
-                <div data-aos="fade-up" data-aos-duration="1600">
-                    <button class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold py-6 px-12 rounded-full text-xl hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                <!-- Hero Content -->
+                <div class="mt-16 md:mt-20">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Pronto Para <span class="text-yellow-400">Levar Seu Negócio</span> no Mercado Livre ao <span class="text-yellow-400">Próximo Nível?</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Descubra como escalar suas vendas, automatizar operações e transformar seu e-commerce em uma máquina de resultados com a consultoria 'Caevana Premium'.
+                    </p>
+                    <button class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-full text-sm md:text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                         Reserve Sua Vaga Agora
                     </button>
                 </div>
         
-                <!-- Mentors Section in Hero -->
-                <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1800">
+                <!-- Mentors Section -->
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     <!-- Mentor 1 -->
                     <div class="text-center transform transition-all hover:scale-110">
                         <div class="bg-gradient-to-r from-blue-700 to-blue-800 p-4 rounded-full shadow-lg mb-4">
                             <img src="/img/left.png" alt="Mentor 1" class="mx-auto rounded-full border-4 border-yellow-400">
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-white">Mentor 1</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Mentor 1</h3>
                         <p class="text-sm text-gray-300">Expert em e-commerce e marketing digital, com 10 anos de experiência.</p>
                     </div>
                     <!-- Mentor 2 -->
@@ -96,7 +133,7 @@
                         <div class="bg-gradient-to-r from-blue-700 to-blue-800 p-4 rounded-full shadow-lg mb-4">
                             <img src="/img/middle.png" alt="Mentor 2" class="mx-auto rounded-full border-4 border-yellow-400">
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-white">Mentor 2</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Mentor 2</h3>
                         <p class="text-sm text-gray-300">Especialista em estratégias de crescimento e otimização de vendas online.</p>
                     </div>
                     <!-- Mentor 3 -->
@@ -104,15 +141,59 @@
                         <div class="bg-gradient-to-r from-blue-700 to-blue-800 p-4 rounded-full shadow-lg mb-4">
                             <img src="/img/right.png" alt="Mentor 3" class="mx-auto rounded-full border-4 border-yellow-400">
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-white">Mentor 3</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-2 text-white">Mentor 3</h3>
                         <p class="text-sm text-gray-300">Mentor focado em estratégias de automação e gestão de e-commerce.</p>
                     </div>
                 </div>
             </div>
         </header>
     
+        <script>
+            // Navbar menu toggle
+            const menuToggle = document.querySelector('#menu-toggle');
+            const menu = document.querySelector('#menu');
+    
+            menuToggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+    
+            document.addEventListener('click', (event) => {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+        </script>
+    
+    </body>
+    </html>
     
     
+
+
+
+  
+   
+   
+    
+
+        <!-- Add the following CSS for the background pattern -->
+       
+        
+    
+
+    
+    
+       
+
+
+
+
+
+
+
+
+
+
 
 
 
